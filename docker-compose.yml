@@ -1,0 +1,53 @@
+version: "3.9"
+
+
+services:
+  admin-boot:
+    image: admin-boot:latest
+    container_name: admin
+    ports:
+      - "8100:8100"
+
+  amazon-boot:
+    image: amazon-boot:latest
+    container_name: amazon-boot
+    ports:
+      - "8102:8102"
+
+  amazon-adv-boot:
+    image: amazon-adv-boot:latest
+    container_name: amazon-adv-boot
+    ports:
+      - "8103:8103"
+
+  erp-boot:
+    image: erp-boot:latest
+    container_name: erp-boot
+    ports:
+      - "8101:8101"
+
+  gateway:
+    image: gateway:latest
+    container_name: gateway
+    ports:
+      - "8099:8099"
+  wimoor-quote:
+    image: wimoor-quote:latest
+    container_name: wimoor-quote
+    ports:
+      - "8105:8105"
+  wimoor-finance:
+    image: wimoor-finance:latest
+    container_name: wimoor-finance
+    ports:
+      - "8106:8106"
+  wimoor-gen:
+    image: wimoor-gen:latest
+    container_name: wimoor-gen
+    ports:
+      - "8107:8107"
+  wimoor-data:
+    image: wimoor-data:latest
+    container_name: wimoor-data
+    ports:
+      - "8104:8104"
