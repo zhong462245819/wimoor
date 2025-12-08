@@ -58,4 +58,4 @@ services:
         - API_HOST=192.168.3.6
         - API_PORT=8099
       ports:
-        - "8084:80"
+        - "8084:8084"
