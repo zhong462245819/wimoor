@@ -52,7 +52,10 @@ services:
     ports:
       - "8104:8104"
   wimoor-ui:
-    image: wimoor-ui:1.0.0
-    container_name: wimoor-ui
-    ports:
-      - "8084:80"
+      image: wimoor-ui:1.0.0
+      container_name: wimoor-ui
+      environment:
+        - API_HOST=192.168.3.6
+        - API_PORT=8099
+      ports:
+        - "8084:80"
