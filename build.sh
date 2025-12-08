@@ -2,7 +2,7 @@
 
 CONF="services.conf"
 
-while read -r servicePath; do
+while IFS= read -r servicePath || [[ -n "$servicePath" ]]; do
   [[ -z "$servicePath" || "$servicePath" =~ ^# ]] && continue
 
   serviceName=$(basename "$servicePath")
@@ -15,7 +15,7 @@ while read -r servicePath; do
 
   echo "当前目录：$(pwd)"
 
-  docker build -t "$serviceName:latest" .
+#  docker build -t "$serviceName:latest" .
 
   cd - > /dev/null
 
