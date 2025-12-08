@@ -15,7 +15,7 @@ while IFS= read -r servicePath || [[ -n "$servicePath" ]]; do
 
   echo "当前目录：$(pwd)"
 
-#  docker build -t "$serviceName:latest" .
+  docker build -t "$serviceName:latest" .
 
   cd - > /dev/null
 
