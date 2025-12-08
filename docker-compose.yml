@@ -51,3 +51,8 @@ services:
     container_name: wimoor-data
     ports:
       - "8104:8104"
+  wimoor-ui:
+    image: wimoor-ui:1.0.0
+    container_name: wimoor-ui
+    ports:
+      - "8084:80"
