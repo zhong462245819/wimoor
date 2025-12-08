@@ -890,7 +890,8 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 		managerLimit.setLosingEffect(LocalDate.parse("2099-01-01"));
 		iManagerLimitService.save(managerLimit);
 		if(StrUtil.isNotBlank(dto.getEmail())) {
-			this.sendWelcomeEmail(dto.getEmail());
+			// TODO email
+			//this.sendWelcomeEmail(dto.getEmail());
 		}
 		return user;
 	}

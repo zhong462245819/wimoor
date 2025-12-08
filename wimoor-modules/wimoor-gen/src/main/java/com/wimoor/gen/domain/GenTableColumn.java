@@ -1,6 +1,8 @@
 package com.wimoor.gen.domain;
 
-import javax.validation.constraints.NotBlank;
+
+import javax.validation.constraints.NotNull;
+
 import com.wimoor.common.core.utils.StringUtils;
 import com.wimoor.common.core.web.domain.BaseEntity;
 
@@ -32,7 +34,7 @@ public class GenTableColumn extends BaseEntity
     private String javaType;
 
     /** JAVA字段名 */
-    @NotBlank(message = "Java属性不能为空")
+    @NotNull(message = "Java属性不能为空")
     private String javaField;
 
     /** 是否主键（1是） */

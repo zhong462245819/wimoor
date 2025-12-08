@@ -629,19 +629,20 @@ public class UserController {
 		AliyunSmsUtils.setNewcode();
 		String code = Integer.toString(AliyunSmsUtils.getNewcode());//4位数验证码
 		SendSmsResponse response=null;
-		try {
-			response = aliyunSmsUtils.sendVerifySms(mobile, code,ftype);
-		} catch (ClientException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if(response!=null&&response.getCode().toUpperCase().equals("OK")) {
-			String key= UUID.fastUUID().toString();
-			stringRedisTemplate.opsForValue().set(key, code, Duration.ofMinutes(10));
-			return Result.success(key);
-		}else{
-			throw new BizException("短信发送失败，请联系管理员");
-		}
+		//try {
+		//	response = aliyunSmsUtils.sendVerifySms(mobile, code,ftype);
+		//} catch (ClientException e) {
+		//	// TODO Auto-generated catch block
+		//	e.printStackTrace();
+		//}
+		String key= UUID.fastUUID().toString();
+		stringRedisTemplate.opsForValue().set(key, code, Duration.ofMinutes(10));
+		log.info("验证码："+code);
+		return Result.success(key);
+		//if(response!=null&&response.getCode().toUpperCase().equals("OK")) {
+		//}else{
+		//	throw new BizException("短信发送失败，请联系管理员");
+		//}
 	}
 
 	@GetMapping("/getEmailCode")

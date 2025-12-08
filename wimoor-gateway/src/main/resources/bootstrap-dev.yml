@@ -7,7 +7,7 @@ spring:
     nacos:
       # 注册中心
       discovery:
-        server-addr: ${NACOS_SERVER_ADDR:localhost:8848}
+        server-addr: ${NACOS_SERVER_ADDR:8.138.220.43:8848}
         namespace: ${NACOS_NAMESPACE:public}
         ip: ${NACOS_IP:127.0.0.1}
 

@@ -8,7 +8,7 @@
     <contextName>logback</contextName>
 
     <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
-    <property name="LOG_HOME" value="/logs/${APP_NAME}" />
+    <property name="LOG_HOME" value="${user.home}/logs/${APP_NAME}" />
 
     <!-- 彩色日志依赖的渲染类 -->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />

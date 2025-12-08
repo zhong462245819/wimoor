@@ -9,15 +9,16 @@ spring:
     nacos:
       # 注册中心
       discovery:
-        server-addr: ${NACOS_SERVER_ADDR:localhost:8848}
-        namespace: ${NACOS_NAMESPACE:public}
-        ip: ${NACOS_IP:127.0.0.1}
+        server-addr: 8.138.220.43:8848
+        namespace: public
+#        ip: ${NACOS_IP:127.0.0.1}
+        username: nacos
+        password: nacos
 
       # 配置中心
       config:
-        server-addr: ${spring.cloud.nacos.discovery.server-addr}
-        namespace: ${NACOS_NAMESPACE:public}
-        file-extension: yaml
+        server-addr: 8.138.220.43:8848
+        namespace: public
         # 公共配置
         shared-configs[0]:
           data-id: wimoor-common
@@ -25,6 +26,8 @@ spring:
         shared-configs[1]:
           data-id: wimoor-commom-ext
           refresh: true
+        username: nacos
+        password: nacos
 # 禁用Swagger以解决Spring Boot 2.6+兼容性问题
 swagger:
   enabled: false

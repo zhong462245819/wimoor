@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -41,10 +42,9 @@ public class ReportController extends BaseController{
                                           @RequestParam(required = false) String templateCode,
                                           @RequestParam(required = false) String period) {
         finReportTemplatesService.clearReportCache(groupid, templateCode, period);
-
-        return Result.success(Map.of(
-                "success", true,
-                "message", "缓存清除成功"
-        ));
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("success", true);
+        map.put("message", "缓存清除成功");
+        return Result.success(map);
     }
 }
