@@ -26,9 +26,9 @@ services:
     ports:
       - "8101:8101"
 
-  gateway:
-    image: gateway:latest
-    container_name: gateway
+  wimoor-gateway:
+    image: wimoor-gateway:latest
+    container_name: wimoor-gateway
     ports:
       - "8099:8099"
   wimoor-quote:
