@@ -23,6 +23,10 @@ services:
   erp-boot:
     image: erp-boot:latest
     container_name: erp-boot
+    environment:
+      - LOGGING_LEVEL_ROOT=DEBUG
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK=DEBUG
+      - LOGGING_LEVEL_COM_ALIBABA_NACOS=DEBUG
     ports:
       - "8101:8101"
 
