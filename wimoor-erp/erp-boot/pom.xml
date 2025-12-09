@@ -121,8 +121,8 @@
             <groupId>com.biz</groupId>
             <artifactId>biz</artifactId>
             <version>1.0</version>
-		  <scope>system</scope>
-		  <systemPath>${project.basedir}/src/main/resources/lib/ocean.client.java.biz.jar</systemPath>
+<!--		  <scope>system</scope>-->
+<!--		  <systemPath>${project.basedir}/src/main/resources/lib/ocean.client.java.biz.jar</systemPath>-->
           </dependency>
             <dependency>
 				    <groupId>net.lingala.zip4j</groupId>
@@ -133,8 +133,8 @@
               <groupId>alibaba.message</groupId>							
               <artifactId>alibaba.message</artifactId>							
                <version>0.9.0</version>
-			   <scope>system</scope>
-			   <systemPath>${project.basedir}/src/main/resources/lib/aop-sdk-message-0.9.0.jar</systemPath>
+<!--			   <scope>system</scope>-->
+<!--			   <systemPath>${project.basedir}/src/main/resources/lib/aop-sdk-message-0.9.0.jar</systemPath>-->
 		 </dependency>
 		 <dependency>
 		 	<groupId>org.springframework.boot</groupId>
